@@ -70,3 +70,10 @@ CREATE TABLE posts(
 
 )
 
+-- METHODS
+
+-- METHOD TO GET THE POST DATA
+SELECT title,comment_name,content,tag, like_count from posts join photos on photos.id = posts.photo_id
+join likes on likes.id = posts.like_id
+join hashtags on hashtags.id = posts.hashtag_id
+join comments on comments.id = posts.comment_id;
